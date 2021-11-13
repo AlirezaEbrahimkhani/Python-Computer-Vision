@@ -4,3 +4,4 @@ https://docs.opencv.org/4.x/
 https://docs.python.org/3/
 https://automaticaddison.com/how-to-do-histogram-matching-using-opencv/
 https://docs.opencv.org/3.4/d4/d1b/tutorial_histogram_equalization.html
+https://automaticaddison.com/difference-between-histogram-equalization-and-histogram-matching/
