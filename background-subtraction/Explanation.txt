@@ -1,0 +1,13 @@
+Explanation :
+
+Background subtraction (BS) is a common and widely used technique for generating a foreground mask
+(namely, a binary image containing the pixels belonging to moving objects in the scene) by using 
+static cameras.
+
+Background modeling consists of two main steps:
+
+1. Background Initialization;
+2. Background Update.
+
+In the first step, an initial model of the background is computed, while in the second step that model
+is updated in order to adapt to possible changes in the scene.
