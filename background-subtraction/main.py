@@ -26,8 +26,8 @@ while(True):
                cv.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 0))
     
     # Apply median filter
-    median = cv.medianBlur(frame, 5)
-    gauss = cv.GaussianBlur(frame, (5, 5), 0)
+    median = cv.medianBlur(fgMask, 5)
+    gauss = cv.GaussianBlur(fgMask, (5, 5), 0)
     median_filter_frame = np.concatenate((median, gauss), axis=1)
 
     # Display the resulting frame
