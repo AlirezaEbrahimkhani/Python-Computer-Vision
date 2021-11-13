@@ -16,7 +16,7 @@ while(True):
     backSub = cv.createBackgroundSubtractorMOG2()
     # Capture frame-by-frame
     ret, frame = system_camera.read()
-
+    
     # Update the background model
     fgMask = backSub.apply(frame)
 
@@ -25,15 +25,9 @@ while(True):
     cv.putText(frame, str(system_camera.get(cv.CAP_PROP_POS_FRAMES)), (15, 15),
                cv.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 0))
 
-    # Apply median filter
-    median = cv.medianBlur(frame, 5)
-    gauss = cv.GaussianBlur(frame, (5, 5), 0)
-    median_filter_frame = np.concatenate((median, gauss), axis=1)
-
     # Display the resulting frame
     cv.imshow('Frame', frame)
     cv.imshow('FG Mask', fgMask)
-    cv.imshow('Median Filter Apply', median_filter_frame)
 
     # Waits for a user input to quit the application
     if cv.waitKey(1) & 0xFF == ord('q'):
